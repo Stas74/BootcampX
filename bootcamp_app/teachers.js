@@ -17,7 +17,7 @@ WHERE cohorts.name = '${process.argv[2] || 'JUL02'}'
 ORDER BY teacher;
 `)
 .then(res => {
-  res.rows.forEach(row => {
-    console.log(`${row.cohort}: ${row.teacher}`);
+  res.rows.forEach(row => {  //  res.rows.forEach(user => {   
+    console.log(`${row.cohort}: ${row.teacher}`);  // console.log(`${user.cohort} : ${user.teacher}`);
   })
 });
